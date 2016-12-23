@@ -4,7 +4,7 @@
 #
 Name     : httplib2
 Version  : 0.9.2
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/h/httplib2/httplib2-0.9.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/h/httplib2/httplib2-0.9.2.tar.gz
 Summary  : A comprehensive HTTP client library.
