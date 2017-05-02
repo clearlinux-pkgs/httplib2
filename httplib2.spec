@@ -4,7 +4,7 @@
 #
 Name     : httplib2
 Version  : 0.10.3
-Release  : 21
+Release  : 22
 URL      : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Source0  : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Summary  : A comprehensive HTTP client library.
