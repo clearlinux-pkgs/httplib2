@@ -4,7 +4,7 @@
 #
 Name     : httplib2
 Version  : 0.10.3
-Release  : 22
+Release  : 23
 URL      : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Source0  : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Summary  : A comprehensive HTTP client library.
@@ -18,7 +18,24 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 
 %description
-No detailed description available
+A comprehensive HTTP client library, ``httplib2`` supports many features left out of other HTTP libraries.
+        
+        **HTTP and HTTPS**
+          HTTPS support is only available if the socket module was compiled with SSL support.
+        
+        
+        **Keep-Alive**
+          Supports HTTP 1.1 Keep-Alive, keeping the socket open and performing multiple requests over the same connection if possible.
+        
+        
+        **Authentication**
+          The following three types of HTTP Authentication are supported. These can be used over both HTTP and HTTPS.
+        
+          * Digest
+          * Basic
+          * WSSE
+        
+        **Caching**
 
 %package python
 Summary: python components for the httplib2 package.
@@ -32,8 +49,11 @@ python components for the httplib2 package.
 %setup -q -n httplib2-0.10.3
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1489262946
+export SOURCE_DATE_EPOCH=1503093329
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -43,14 +63,18 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python python2/httplib2test.py || :
 %install
-export SOURCE_DATE_EPOCH=1489262946
+export SOURCE_DATE_EPOCH=1503093329
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
