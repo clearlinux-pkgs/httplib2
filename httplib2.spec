@@ -4,12 +4,13 @@
 #
 Name     : httplib2
 Version  : 0.10.3
-Release  : 23
+Release  : 24
 URL      : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Source0  : http://pypi.debian.net/httplib2/httplib2-0.10.3.tar.gz
 Summary  : A comprehensive HTTP client library.
 Group    : Development/Tools
 License  : MIT
+Requires: httplib2-legacypython
 Requires: httplib2-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -37,9 +38,18 @@ A comprehensive HTTP client library, ``httplib2`` supports many features left ou
         
         **Caching**
 
+%package legacypython
+Summary: legacypython components for the httplib2 package.
+Group: Default
+
+%description legacypython
+legacypython components for the httplib2 package.
+
+
 %package python
 Summary: python components for the httplib2 package.
 Group: Default
+Requires: httplib2-legacypython
 
 %description python
 python components for the httplib2 package.
@@ -53,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503093329
+export SOURCE_DATE_EPOCH=1505003803
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -63,7 +73,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 python python2/httplib2test.py || :
 %install
-export SOURCE_DATE_EPOCH=1503093329
+export SOURCE_DATE_EPOCH=1505003803
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -74,7 +84,10 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
