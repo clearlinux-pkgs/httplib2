@@ -1,3 +1,5 @@
 # This file contains recursive sources that require this package
+certbot
+google-api-python-client
 httpretty
 oauth2client
