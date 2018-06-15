@@ -14,7 +14,7 @@ Requires: httplib2-python3
 Requires: httplib2-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
