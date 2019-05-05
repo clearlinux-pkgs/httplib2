@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 certbot
 gabbi
+glance
 google-api-python-client
 horizon
 httpretty
