@@ -1,8 +1,11 @@
 # This file contains recursive sources that require this package
 certbot
+cinder
 gabbi
 glance
+glance_store
 google-api-python-client
 horizon
 httpretty
+neutron
 oauth2client
