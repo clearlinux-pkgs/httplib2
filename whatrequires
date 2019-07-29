@@ -2,10 +2,14 @@
 certbot
 cinder
 gabbi
+gcs-oauth2-boto-plugin
 glance
 glance_store
 google-api-python-client
+google-apitools
+gsutil
 horizon
 httpretty
 neutron
 oauth2client
+python-troveclient
