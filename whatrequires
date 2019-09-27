@@ -1,7 +1,6 @@
 # This file contains recursive sources that require this package
 certbot
 cinder
-gabbi
 gcs-oauth2-boto-plugin
 glance
 glance_store
