@@ -2,13 +2,11 @@
 certbot
 cinder
 gcs-oauth2-boto-plugin
-glance
 glance_store
 google-api-python-client
 google-apitools
 google-auth-httplib2
 gsutil
-horizon
 httpretty
 neutron
 oauth2client
