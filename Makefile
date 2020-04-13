@@ -1,5 +1,5 @@
 PKG_NAME := httplib2
-URL = https://files.pythonhosted.org/packages/65/4c/c0d95b6d6904f04e306c3a92d949fe53198c62c5a3a0a0d10298ad6e5d1e/httplib2-0.17.1.tar.gz
+URL = https://files.pythonhosted.org/packages/1b/f0/a35a448afea308aeb6a1430dbcfb46f4cef11360cbc18f22af6e567bb847/httplib2-0.17.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
