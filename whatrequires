@@ -1,14 +1,9 @@
 # This file contains recursive sources that require this package
 certbot
-cinder
 gcs-oauth2-boto-plugin
-glance_store
 google-api-python-client
 google-apitools
 google-auth-httplib2
 gsutil
 httpretty
-neutron
 oauth2client
-python-troveclient
-tempest-lib
