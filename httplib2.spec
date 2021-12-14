@@ -4,7 +4,7 @@
 #
 Name     : httplib2
 Version  : 0.20.2
-Release  : 78
+Release  : 79
 URL      : https://files.pythonhosted.org/packages/37/fd/525d4c267cffe4437405fdb883c57b895ec03746337dc5ca7489d40f60d0/httplib2-0.20.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/37/fd/525d4c267cffe4437405fdb883c57b895ec03746337dc5ca7489d40f60d0/httplib2-0.20.2.tar.gz
 Summary  : A comprehensive HTTP client library.
